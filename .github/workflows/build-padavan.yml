@@ -97,6 +97,8 @@ jobs:
         #########################################################################################
         sudo ./clear_tree
         sudo ./build_firmware_modify $TNAME 0
+        cd /opt
+        sudo mkdir images
         sudo mv -f images/*.trx /opt/images/
     - name : Upload packages
       uses: actions/upload-artifact@master
